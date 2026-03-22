@@ -1,0 +1,14 @@
+com/deepfind/service/DataLoader.class
+com/deepfind/exception/GlobalExceptionHandler.class
+com/deepfind/util/TextProcessor.class
+com/deepfind/config/AppConfig.class
+com/deepfind/dto/SearchRequest.class
+com/deepfind/service/SearchService.class
+com/deepfind/model/SearchResult.class
+com/deepfind/dto/SearchResponse.class
+com/deepfind/index/InvertedIndex.class
+com/deepfind/model/Document.class
+com/deepfind/repository/DocumentRepository.class
+com/deepfind/util/Tokenizer.class
+com/deepfind/controller/SearchController.class
+com/deepfind/service/IndexService.class

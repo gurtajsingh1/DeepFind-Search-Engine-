@@ -1,0 +1,15 @@
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/DeepFindApplication.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/config/AppConfig.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/controller/SearchController.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/dto/SearchRequest.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/dto/SearchResponse.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/exception/GlobalExceptionHandler.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/index/InvertedIndex.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/model/Document.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/model/SearchResult.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/repository/DocumentRepository.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/service/DataLoader.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/service/IndexService.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/service/SearchService.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/util/TextProcessor.java
+/Users/mymac/Desktop/deepfind-search-engine/src/main/java/com/deepfind/util/Tokenizer.java
