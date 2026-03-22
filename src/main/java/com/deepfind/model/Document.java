@@ -2,21 +2,18 @@ package com.deepfind.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
-@Entity
-@Table(name = "documents")
-@Data
-public class Document {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
-    private String title;
-
-    @Column(columnDefinition = "TEXT")
+public class Document{
+    private int id;
     private String content;
+    public Document(int id , String content){
+        this.id = id;
+        this.content = content;
+    }
+    public int getId(){
+        return id;
+    }
+    public String getContent(){
+        return content;
+    }
 
-    private String url;
 }

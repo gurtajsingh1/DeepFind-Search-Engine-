@@ -1,11 +1,20 @@
 package com.deepfind.model;
 
 import lombok.Data;
-
-@Data
 public class SearchResult {
-    private Long id;
-    private String title;
-    private String snippet;
-    private double score;
+private int docId;
+private double score;
+
+    public SearchResult(int docId, double score) {
+        this.docId = docId;
+        this.score = score;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public int getDocId() {
+        return docId;
+    }
 }

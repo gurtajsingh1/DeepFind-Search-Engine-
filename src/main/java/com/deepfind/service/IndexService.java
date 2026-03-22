@@ -2,18 +2,15 @@ package com.deepfind.service;
 
 import com.deepfind.model.Document;
 import com.deepfind.index.InvertedIndex;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class IndexService {
+    @Autowired
+    private InvertedIndex invertedIndex;
 
-    private final InvertedIndex invertedIndex;
-
-    public IndexService(InvertedIndex invertedIndex) {
-        this.invertedIndex = invertedIndex;
-    }
-
-    public void indexDocument(Document document) {
-        // Add document to inverted index
+    public void addDocument(Document doc){
+        invertedIndex.addDocument(doc);
     }
 }
