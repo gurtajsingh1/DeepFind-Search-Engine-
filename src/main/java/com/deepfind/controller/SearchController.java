@@ -8,15 +8,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/search")
+@RequestMapping("/api/v1/deepfind/search")
 public class SearchController {
 
     @Autowired
     private SearchService searchService;
 
-    @PostMapping
-    public ResponseEntity<SearchResponse> search(@RequestBody SearchRequest request) {
-        SearchResponse response = searchService.search(request.getQuery());
-        return ResponseEntity.ok(response);
+    @GetMapping
+    public List<SearchResult> search(@RequestParam String q) {
+        return searchService.search(q);
     }
 }
