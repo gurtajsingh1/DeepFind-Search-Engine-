@@ -1,15 +1,24 @@
 package com.deepfind.index;
 
+import com.deepfind.model.SearchResult;
+import org.springframework.stereotype.Component;
+
 import java.util.*;
-
+@Component
 public class InvertedIndex {
-    private final Map<String, Set<Long>> index = new HashMap<>();
-
-    public void addTerm(String term, Long docId) {
-        index.computeIfAbsent(term, k -> new HashSet<>()).add(docId);
+private Map<String , List<Integer>> index = new HashMap<>();
+public void addDocument(Document doc){
+    String[] words  = doc.getContent().toLowerCase().split("\\s+");
+    for(String Word : words){
+        index.computeIfAbsent(Word , k -> new ArrayList<>()).add(doc.getId());
     }
-
-    public Set<Long> getDocs(String term) {
-        return index.getOrDefault(term, Set.of());
+}
+public List<SearchResult> search(String query){
+    List<SearchResult> results = new ArrayList<>();
+    List<Integer> docs = index.getOrDefault(query.toLowerCase(), new ArrayList<>());
+    for(Integer docId : docs){
+        results.add(new SearchResult(docId , 1.0));
     }
+    return results;
+}
 }
