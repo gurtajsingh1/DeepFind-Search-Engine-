@@ -1,9 +1,19 @@
 package com.deepfind.repository;
 
 import com.deepfind.model.Document;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Repository
-public interface DocumentRepository extends JpaRepository<Document, Long> {
+public class DocumentRepository {
+    private Map<Integer , Document> storage =  new HashMap<>();
+
+    public void save(Document doc){
+        storage.put(doc.getId(), doc);
+    }
+    public Document findbyId(int id){
+        return storage.get(id);
+    }
 }
