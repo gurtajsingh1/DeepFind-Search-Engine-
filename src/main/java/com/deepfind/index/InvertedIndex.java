@@ -1,7 +1,9 @@
 package com.deepfind.index;
 
+import com.deepfind.model.Document;
 import com.deepfind.model.SearchResult;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 @Component

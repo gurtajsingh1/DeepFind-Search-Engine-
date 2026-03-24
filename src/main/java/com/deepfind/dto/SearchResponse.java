@@ -1,12 +1,16 @@
 package com.deepfind.dto;
 
 import com.deepfind.model.SearchResult;
-import lombok.Data;
+
 import java.util.List;
 
-@Data
 public class SearchResponse {
-    private List<SearchResult> results;
-    private long total;
-    private int page;
+   private List<SearchResult> results;
+
+   public SearchResponse(List<SearchResult> results){
+       this.results = results;
+   }
+   public List<SearchResult> getResults(){
+       return results;
+   }
 }
