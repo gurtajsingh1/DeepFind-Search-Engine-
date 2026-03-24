@@ -1,135 +1,82 @@
-# DeepFind Search Engine
+# DeepFind - Search Engine
 
-A mini search engine built using Spring Boot.
-This project is part of my learning journey into backend development and search systems.
+DeepFind is a mini search engine built using Java and Spring Boot.  
+The project focuses on implementing core search engine concepts such as indexing, query processing, and ranking from scratch.
 
-The idea is simple: start with basic keyword search and gradually build towards something closer to a real search engine.
-
----
-
-## What it does
-
-* Search documents using keywords
-* Uses an inverted index for faster lookups
-* Returns matching documents with basic ranking
-
-More features will be added step by step.
+Instead of relying on external tools, this project is designed to understand how search systems work internally.
 
 ---
 
-## Project Structure
+## Features
 
-```
-DeepFind-Search-Engine/
-│
-├── src/main/java/com/deepfind/
-│   ├── DeepFindApplication.java
-│   │
-│   ├── controller/
-│   │   └── SearchController.java
-│   │
-│   ├── service/
-│   │   ├── SearchService.java
-│   │   └── IndexService.java
-│   │
-│   ├── repository/
-│   │   └── DocumentRepository.java
-│   │
-│   ├── model/
-│   │   ├── Document.java
-│   │   └── SearchResult.java
-│   │
-│   ├── dto/
-│   │   ├── SearchRequest.java
-│   │   └── SearchResponse.java
-│   │
-│   ├── index/
-│   │   └── InvertedIndex.java
-│   │
-│   ├── util/
-│   │   ├── Tokenizer.java
-│   │   └── TextProcessor.java
-│   │
-│   ├── crawler/
-│   │   └── WebCrawler.java
-│   │
-│   ├── config/
-│   │   └── AppConfig.java
-│   │
-│   └── exception/
-│       └── GlobalExceptionHandler.java
-│
-├── src/main/resources/
-│   └── application.properties
-│
-└── pom.xml
-```
+- Keyword-based search
+- Multi-word query support
+- AND / OR query handling
+- Basic ranking based on term frequency
+- In-memory inverted index
+- REST API for search
+
+---
+
+## Tech Stack
+
+- Java
+- Spring Boot
+- REST APIs
 
 ---
 
 ## API
 
-```
-GET /api/v1/deepfind/search?q=your_query
-```
+### Search Endpoint
 
-Example:
+GET /api/v1/deepfind/search?q=java
 
-```
-/api/v1/deepfind/search?q=java
-```
+### Example Queries
 
----
-
-## How it works (basic idea)
-
-* Text is split into words
-* Words are stored in a map → word → list of documents
-* When a query comes in, it looks up the word and returns matching docs
+- `java`
+- `java AND spring`
+- `java OR python`
 
 ---
 
-## Current status
+## How It Works
 
-Working on:
-
-* indexing
-* search API
-
-Planned next:
-
-* better ranking
-* multi-word queries
-* web crawler
+1. User sends a query
+2. Query is processed and tokenized
+3. Search is performed on the inverted index
+4. Matching documents are retrieved
+5. Results are ranked and returned
 
 ---
 
-## How to run
+## Project Structure
 
-* Clone the repo
-* Open in IDE
-* Run `DeepFindApplication`
-* Hit the API from browser or Postman
-
----
-
-## Notes
-
-This is not a production-ready search engine.
-It's being built step by step to understand how things work internally.
+controller/     → Handles API requests  
+service/        → Business logic  
+index/          → Core search engine logic  
+model/          → Data models  
+util/           → Utility classes  
 
 ---
 
-## Why this project
+## Future Improvements
 
-Wanted to build something that connects:
-
-* DSA (maps, searching)
-* backend (Spring Boot)
-* system design basics
+- TF-IDF based ranking
+- Phrase search support
+- Database integration
+- Web crawler for real data
+- Caching for performance
+- Integration with Elasticsearch
 
 ---
 
-## Author
+## Motivation
 
-Built while learning and experimenting.
+The goal of this project is to build a strong understanding of:
+
+- How search engines index data
+- How queries are processed
+- How ranking determines relevance
+
+This project prioritizes learning fundamentals over using pre-built solutions.
